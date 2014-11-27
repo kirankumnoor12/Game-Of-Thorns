@@ -1,0 +1,140 @@
+body { 
+  background: url(../img/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #F6F89C;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.centered {  
+		display:block;
+		position:absolute;
+		top:50%;
+		left:50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	
+	/*
+	.tiled{
+	
+		display: block;
+		width: 20px;
+		height: 20px;
+	
+	}
+*/
+	.tileOne{
+		background-position: 0px 0px;
+	}
+
+	.tileTwo{
+		background-position: 0px -30px;
+	}
+	
+	.tileThree{
+		background-position: 0px -30px;
+	}
+	
+	.tileFour{
+		background-position: 0px -30px;
+	}
+	
+	.tileFive{
+		background-position: 0px -30px;
+	}
+	
+	.tileSix{
+		background-position: 0px -30px;
+	}
+	
+	.tileSeven{
+		background-position: 0px -30px;
+	}
+	
+	.tileEight{
+		background-position: 0px -30px;
+	} 
+
+	button.tile{
+		background: #89BCEF;
+		border-radius: 5px;
+		/*padding: 10px 20px;
+		display: block;*/
+		font-family: arial;
+		font-weight: bold;
+		color:#7f7f7f;
+		text-decoration: none;
+		text-shadow:0px 1px 0px #fff;
+		border:1px solid #a7a7a7;
+		/*width: 145px;*/
+		margin:2px;
+		/*margin-top:100px;
+		box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);*/
+		box-shadow: 0 2px 1px white inset, 0 -2px 5px white, 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.1);
+		-moz-transition:box-shadow 0.25s;
+		-webkit-transition:box-shadow 0.25s;
+		-ms-transition:box-shadow 0.25s;
+	}
+	
+	button:hover{
+		box-shadow: 0px 2px 1px white inset, 0px -2px 5px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.1);
+		background:-moz-linear-gradient(top, #61A5E9 0%,#6DACEB 100%);
+		background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
+		background:-ms-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%)
+	}
+	button:active{
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+		background:-moz-linear-gradient(top, #6DACEB 0%,#3D91E5 100%);
+		background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
+		background:-ms-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
+	}
+	button:disabled  {
+		/*box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5) inset, 0px -2px 5px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);*/
+		box-shadow: 0 0px 0px rgba(0, 0, 0, 0.50) inset, 0 0px 0px white, 0 0px 0px rgba(0, 0, 0, 0.1), 0 0px 0px rgba(0, 0, 0, 0.1);
+		background:-moz-linear-gradient(top, #C4C4C4 100%,#C4C4C4 100%);
+		background:-webkit-linear-gradient(top, #C4C4C4 100%,#C4C4C4 100%);
+		background:-ms-linear-gradient(top, #C4C4C4 100%,#C4C4C4 100%);
+	}
+	
+	button.marked{
+		/*box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5) inset, 0px -2px 5px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);*/
+		box-shadow: 0 0px 0px rgba(0, 0, 0, 0.50) inset, 0 0px 0px white, 0 0px 0px rgba(0, 0, 0, 0.1), 0 0px 0px rgba(0, 0, 0, 0.1);
+		background:-moz-linear-gradient(top, #C4C4C4 100%,#C4C4C4 100%);
+		background:-webkit-linear-gradient(top, #C4C4C4 100%,#C4C4C4 100%);
+		background:-webkit-linear-gradient(top, #C4C4C4 100%,#C4C4C4 100%);
+	}
+	
+	
+	.clickButton{
+		background: #ECECEC;
+		border-radius: 8px;
+		padding: 5px 5px;
+		display: block;
+		font-family: arial;
+		font-weight: bold;
+		color:#7f7f7f;
+		text-decoration: none;
+		text-shadow:0px 1px 0px #fff;
+		border:1px solid #a7a7a7;
+		width: 145px;
+		
+		box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 6px 8px rgba(0, 0, 0, 0.1);
+		-webkit-transition:box-shadow 0.5s;
+	}
+	.clickButton i{
+		float: right;
+		margin-top: 2px;
+	}
+	.clickButton:hover{
+		box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 6px 8px rgba(0, 0, 0, 0.1);
+	}
+	.clickButton:active{
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+		background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
+	}

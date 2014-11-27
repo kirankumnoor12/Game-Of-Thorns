@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/mineGrid.css" media="screen">
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/sweep.js"></script>
+	
+    <title>Game of Thorns v0.1</title>
+
+</head>
+<body oncontextmenu="return false;" >
+
+<div id="mineGridContainer" >
+<h1 align="center"><b>Game of Thorns</b><sup>TM</sup> v0.1<a href="mailto:kirankumnoor@bstc.bel.com?Subject=Reporting%20a%20bug" style="padding-left:20px;" target="_top" title="Report Bug"><img src="img/mail.png"/></a></h1>
+
+
+	<div id="mineGridDetails" style="width:450px;" class="centered">
+		
+		<fieldset >
+			<legend>Difficulty</legend>
+				<table style="float: left; font-size: 0.9em;">
+					<tr><td><input type="radio" name="difficultyLevel" id="begin" value="0" checked="checked"/></td><td><label for="begin">Beginner<br>10 mines<br>9 x 9 tile grid</label></td></tr>
+					<tr><td><input type="radio" name="difficultyLevel" id="inter" value="1"/></td><td><label for="inter">Intermediate<br>40 mines<br>16 x 16 tile grid</label></td></tr>
+					<tr><td><input type="radio" name="difficultyLevel" id="advc" value="2"/></td><td><label for="advc">Advanced<br>99 mines<br>16 x 30 tile grid</label></td></tr>
+					
+				</table>
+				<table style="float:right; font-size: 0.9em;">
+					<tr><td><input type="radio" name="difficultyLevel" id="custDifficulty" value="custom"/></td><td><label for="custDifficulty">Custom</label></td><td></td><tr>
+					<tr><td></td><td>Height :</td><td><input style="width:30px;" type="text" id="gridHeight"/></td></tr>
+					<tr><td></td><td>Width :</td><td><input style="width:30px;" type="text" id="gridWidth"/></td></tr>
+					<tr><td></td><td>Mines :</td><td><input style="width:30px;" type="text" id="totalNoOfMines"/></td></tr>
+					<tr><td><br></td><td></td></tr>
+					<tr><td><br></td><td></td></tr>
+					<tr><td></td><td colspan="2"><input type="button" class="clickButton" id="proceed"  value="Start Game!" onclick="window.mineFxn.startGame()"/></td></tr>
+				</table>
+
+		</fieldset>
+
+	</div>
+	<div id="mineGridStats" style="width:350px;" class="centered">
+		<h2>Statisctics</h2><hr>
+		<table id="statsTable">
+			<tr >
+				<td>
+					<div id="multiselectForLevels" style="float:left;">
+						<fieldset>
+						<legend>Levels :</legend>
+							<select id="levelSelectForStats" size="3" onchange="window.mineFxn.showStats()">
+								<option id="beginnerLevel" value="0" selected="selected">Beginner</option>
+								<option id="intermediateLevel" value="1">Intermediate</option>
+								<option id="expertLevel" value="2">Expert</option>
+							</select>
+						</fieldset>
+					</div>
+				</td>
+				<td>
+					<div id="mineGridStatsTableDiv" hidden="true" style="float:right;">
+						<table>
+							<tr><td>Played :</td><td id="gamesPlayedTd"></td></tr>
+							<tr><td>Won :</td><td id="gamesWonTd"></td></tr>
+							<tr><td>Lost :</td><td id="gamesLostTd"></td></tr>
+							<tr><td>Best Time :</td><td id="bestTimeTd"></td></tr>
+						</table>
+					</div>
+					<div id="mineGridNoStatsYet" hidden="true" style="float:right;">
+						No stats yet for this level! 
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div id="clearedStats" hidden="true">
+						All stats cleared!
+					</div>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<div id="statsClearedTable">
+			<input id="clearStatsButton" type="button" class="clickButton" style="width:90px; float:left;" value="Clear Stats" onclick="window.mineFxn.clearStats()"/>
+			<input id="backFromStats" type="button" class="clickButton" style="width:65px; float:right;" value="Back" onclick="window.mineFxn.backToGame()"/>
+		</div>
+
+	</div>
+	<center>
+	<div id="gameContainer" class="centered" hidden="true">
+		<div id="homeButtonDiv" style="float:right;">
+		<input id="statsButton" type="image" src="img/stats.png" width="20" height="20" style="width:21px" title="Game Statistics!" onclick="window.mineFxn.showStats()"/> 
+		
+		<input id="homeButton" type="image" src="img/home.png" width="20" height="20" style="width:21px" title="Back to Main Menu!" onclick="window.mineFxn.backToMainMenu()"/> 
+		</div>
+		<br><br>
+		<div id="mineGrid">
+
+		</div>
+		<br>
+		<div id="footer">
+		
+			<div id="timer" style="float:left;" title="Time elapsed (sec)"></div>
+			<img id="emojiButton"  width="25" height="25" src="img/smiled.png" onclick="window.mineFxn.playAgain()"/>
+			
+			<div id="minesLeft" style="float:right;" title="Mines remaining"> </div>
+		</div>
+	</div>
+	</center>
+</div>
+
+</body>
+</html>
